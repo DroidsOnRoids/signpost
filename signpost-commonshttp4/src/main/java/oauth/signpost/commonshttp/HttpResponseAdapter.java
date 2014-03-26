@@ -6,9 +6,9 @@ import java.io.InputStream;
 
 public class HttpResponseAdapter implements oauth.signpost.http.HttpResponse {
 
-    private org.apache.http.HttpResponse response;
+    private ch.boye.httpclientandroidlib.HttpResponse response;
 
-    public HttpResponseAdapter(org.apache.http.HttpResponse response) {
+    public HttpResponseAdapter(ch.boye.httpclientandroidlib.HttpResponse response) {
         this.response = response;
     }
 

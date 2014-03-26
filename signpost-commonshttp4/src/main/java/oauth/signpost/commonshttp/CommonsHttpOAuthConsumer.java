@@ -18,7 +18,7 @@ import oauth.signpost.AbstractOAuthConsumer;
 import oauth.signpost.http.HttpRequest;
 
 /**
- * Supports signing HTTP requests of type {@link org.apache.http.HttpRequest}.
+ * Supports signing HTTP requests of type {@link ch.boye.httpclientandroidlib.HttpRequest}.
  * 
  * @author Matthias Kaeppler
  */
@@ -32,13 +32,13 @@ public class CommonsHttpOAuthConsumer extends AbstractOAuthConsumer {
 
     @Override
     protected HttpRequest wrap(Object request) {
-        if (!(request instanceof org.apache.http.HttpRequest)) {
+        if (!(request instanceof ch.boye.httpclientandroidlib.HttpRequest)) {
             throw new IllegalArgumentException(
                     "This consumer expects requests of type "
-                            + org.apache.http.HttpRequest.class.getCanonicalName());
+                            + ch.boye.httpclientandroidlib.HttpRequest.class.getCanonicalName());
         }
 
-        return new HttpRequestAdapter((org.apache.http.client.methods.HttpUriRequest) request);
+        return new HttpRequestAdapter((ch.boye.httpclientandroidlib.client.methods.HttpUriRequest) request);
     }
 
 }

@@ -5,10 +5,10 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.client.methods.HttpUriRequest;
+import ch.boye.httpclientandroidlib.Header;
+import ch.boye.httpclientandroidlib.HttpEntity;
+import ch.boye.httpclientandroidlib.HttpEntityEnclosingRequest;
+import ch.boye.httpclientandroidlib.client.methods.HttpUriRequest;
 
 public class HttpRequestAdapter implements oauth.signpost.http.HttpRequest {
 
@@ -16,7 +16,7 @@ public class HttpRequestAdapter implements oauth.signpost.http.HttpRequest {
 
     private HttpEntity entity;
 
-    public HttpRequestAdapter(org.apache.http.client.methods.HttpUriRequest request) {
+    public HttpRequestAdapter(ch.boye.httpclientandroidlib.client.methods.HttpUriRequest request) {
         this.request = request;
         if (request instanceof HttpEntityEnclosingRequest) {
             entity = ((HttpEntityEnclosingRequest) request).getEntity();

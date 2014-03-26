@@ -2,8 +2,8 @@ package oauth.signpost.commonshttp;
 
 import oauth.signpost.basic.HttpRequestAdapterTestBase;
 
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
+import ch.boye.httpclientandroidlib.client.methods.HttpPost;
+import ch.boye.httpclientandroidlib.entity.StringEntity;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnit44Runner;
 

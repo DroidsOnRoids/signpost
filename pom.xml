@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>oauth.signpost</groupId>
+  <groupId>pl.droidsonroids.oauth.signpost</groupId>
   <artifactId>oauth-signpost</artifactId>
   <packaging>pom</packaging>
   <version>1.2.1.2</version>
@@ -30,9 +30,7 @@
 
   <modules>
     <module>signpost-core</module>
-    <module>signpost-commonshttp3</module>
     <module>signpost-commonshttp4</module>
-    <module>signpost-jetty6</module>
   </modules>
 
   <licenses>

@@ -9,13 +9,13 @@ import java.io.InputStream;
 import oauth.signpost.http.HttpRequest;
 import oauth.signpost.mocks.OAuthProviderMock;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.ProtocolVersion;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.entity.InputStreamEntity;
-import org.apache.http.message.BasicStatusLine;
+import ch.boye.httpclientandroidlib.HttpResponse;
+import ch.boye.httpclientandroidlib.ProtocolVersion;
+import ch.boye.httpclientandroidlib.StatusLine;
+import ch.boye.httpclientandroidlib.client.HttpClient;
+import ch.boye.httpclientandroidlib.client.methods.HttpUriRequest;
+import ch.boye.httpclientandroidlib.entity.InputStreamEntity;
+import ch.boye.httpclientandroidlib.message.BasicStatusLine;
 import org.mockito.Mockito;
 
 @SuppressWarnings("serial")
