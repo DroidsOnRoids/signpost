@@ -1,11 +1,11 @@
 package oauth.signpost;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnit44Runner;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -19,12 +19,12 @@ import oauth.signpost.http.HttpParameters;
 import oauth.signpost.http.HttpRequest;
 import oauth.signpost.mocks.OAuthProviderMock;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.runners.MockitoJUnit44Runner;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.anyObject;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnit44Runner.class)
 public abstract class OAuthProviderTest extends SignpostTestBase {
@@ -150,7 +150,7 @@ public abstract class OAuthProviderTest extends SignpostTestBase {
         // prepare a provider that has response params set
         HttpParameters params = new HttpParameters();
         params.put("a", "1");
-        ((AbstractOAuthProvider) provider).setResponseParameters(params);
+        provider.setResponseParameters(params);
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ObjectOutputStream ostream = new ObjectOutputStream(baos);

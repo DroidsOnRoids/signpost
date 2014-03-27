@@ -1,19 +1,20 @@
 package oauth.signpost.signature;
 
-import static org.junit.Assert.assertEquals;
-import oauth.signpost.SignpostTestBase;
-import oauth.signpost.http.HttpParameters;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnit44Runner;
+
+import oauth.signpost.SignpostTestBase;
+import oauth.signpost.http.HttpParameters;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnit44Runner.class)
 public class SigningStrategyTest extends SignpostTestBase {
 
     @Test
     public void testDifferentSigningStrategies() throws Exception {
-        SigningStrategy strategy = null;
+        SigningStrategy strategy;
         String signature = "123";
         HttpParameters params = new HttpParameters();
         params.put("realm", "http://x.com");
