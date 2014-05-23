@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/oauth-signpost.iml" filepath="$PROJECT_DIR$/oauth-signpost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signpost-commonshttp4/signpost-commonshttp4.iml" filepath="$PROJECT_DIR$/signpost-commonshttp4/signpost-commonshttp4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signpost-core/signpost-core.iml" filepath="$PROJECT_DIR$/signpost-core/signpost-core.iml" />
+    </modules>
+  </component>
+</project>
+
