@@ -14,6 +14,8 @@
  */
 package oauth.signpost;
 
+import com.google.gdata.util.common.base.PercentEscaper;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,8 +28,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import oauth.signpost.http.HttpParameters;
-
-import com.google.gdata.util.common.base.PercentEscaper;
 
 public class OAuth {
 
@@ -221,8 +221,7 @@ public class OAuth {
             if (i > 0) {
                 sb.append("&");
             }
-            sb.append(OAuth.percentEncode(kvPairs[i]) + "="
-                    + OAuth.percentEncode(kvPairs[i + 1]));
+            sb.append(OAuth.percentEncode(kvPairs[i])).append('=').append(OAuth.percentEncode(kvPairs[i + 1]));
         }
         return sb.toString();
     }
@@ -240,9 +239,7 @@ public class OAuth {
 
     public static String addQueryString(String url, String queryString) {
         String queryDelim = url.contains("?") ? "&" : "?";
-        StringBuilder sb = new StringBuilder(url + queryDelim);
-        sb.append(queryString);
-        return sb.toString();
+        return url + queryDelim + queryString;
     }
 
     /**
@@ -273,7 +270,7 @@ public class OAuth {
             boolean isOAuthElem = kvPairs[i].startsWith("oauth_")
                     || kvPairs[i].startsWith("x_oauth_");
             String value = isOAuthElem ? OAuth.percentEncode(kvPairs[i + 1]) : kvPairs[i + 1];
-            sb.append(OAuth.percentEncode(kvPairs[i]) + "=\"" + value + "\"");
+            sb.append(OAuth.percentEncode(kvPairs[i])).append("=\"").append(value).append("\"");
         }
         return sb.toString();
     }

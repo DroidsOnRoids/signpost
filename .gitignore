@@ -1,5 +1,5 @@
 target
-/signpost-commonshttp3/.settings/
-/signpost-commonshttp4/.settings/
-/signpost-core/.settings/
+.settings
 .DS_Store
+.idea
+*.iml
